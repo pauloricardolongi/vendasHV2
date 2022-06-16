@@ -33,10 +33,11 @@
         <!-- Criação das tabelas update -->         
         <!-- Validação das tabelas validate-->     
        
-       <property name="hbm2ddl.auto">update</property>
+      <property name="hbm2ddl.auto">update</property>
         
           <mapping class="br.com.Vendas.domain.Fornecedor"/>
             <mapping class="br.com.Vendas.domain.Funcionario" />
+             <mapping class="br.com.Vendas.domain.Produto" />
           
 
 
