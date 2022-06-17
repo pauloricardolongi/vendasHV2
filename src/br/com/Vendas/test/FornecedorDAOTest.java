@@ -1,5 +1,7 @@
 package br.com.Vendas.test;
 
+import java.util.List;
+
 import org.junit.Ignore;
 import org.junit.Test;
 import br.com.Vendas.DAO.FornecedoresDAO;
@@ -8,12 +10,12 @@ import br.com.Vendas.domain.Fornecedor;
 public class FornecedorDAOTest {
 
 	@Test
-	
+	@Ignore
 	public void salvar() {
 		Fornecedor f1 = new Fornecedor();
 		Fornecedor f2 = new Fornecedor();
-		f1.setDescricao("Super Util");
-		f2.setDescricao("Total");
+		f1.setDescricao("Max Peças");
+		f2.setDescricao("Laboratório");
 
 		FornecedoresDAO dao = new FornecedoresDAO();
 		dao.salvar(f1);
@@ -21,18 +23,18 @@ public class FornecedorDAOTest {
 
 	}
 
-//	@Test
-//	@Ignore
-//	public void listar() {
-//		FornecedoresDAO dao = new FornecedoresDAO();
-//		List<Fornecedor> fornecedores = dao.listar();
-//
-//		for (Fornecedor fornecedor : fornecedores) {
-//			System.out.println(fornecedor);
-//		}
-//
-//	}
-//
+	@Test
+	
+	public void listar() {
+		FornecedoresDAO dao = new FornecedoresDAO();
+		List<Fornecedor> fornecedores = dao.listar();
+
+		for (Fornecedor fornecedor : fornecedores) {
+			System.out.println(fornecedor);
+		}
+
+	}
+
 //	@Test
 //	@Ignore
 //	public void buscarPorCodigo() {

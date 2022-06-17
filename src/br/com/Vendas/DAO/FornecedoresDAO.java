@@ -36,29 +36,29 @@ public class FornecedoresDAO {
 		
 	}
 	
-//	@SuppressWarnings("unchecked")
-//	public List<Fornecedor> listar(){
-//Session sessao = HibernateUtil.getSessionFactory().openSession();
-//		
-//		List<Fornecedor> fornecedores = null;
-//		try{
-//			
-//			Query consulta = sessao.getNamedQuery("Fornecedor.listar");
-//			fornecedores = consulta.list();
-//			
-//			
-//		}catch(RuntimeException ex){
-//			throw ex;
-//				
-//			
-//		}
-//			
-//			finally{
-//				sessao.close();
-//			}
-//		return fornecedores;
-//	}
-//	
+	@SuppressWarnings("unchecked")
+	public List<Fornecedor> listar(){
+Session sessao = HibernateUtil.getSessionFactory().openSession();
+		
+		List<Fornecedor> fornecedores = null;
+		try{
+			
+			Query consulta = sessao.getNamedQuery("Fornecedor.listar");
+			fornecedores = consulta.list();
+			
+			
+		}catch(RuntimeException ex){
+			throw ex;
+				
+			
+		}
+			
+			finally{
+				sessao.close();
+			}
+		return fornecedores;
+	}
+	
 //	public Fornecedor buscarPorCodigo(Long codigo){
 //		Session sessao = HibernateUtil.getSessionFactory().openSession();
 //				
