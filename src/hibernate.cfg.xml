@@ -39,6 +39,7 @@
              <mapping class="br.com.Vendas.domain.Funcionario" />
              <mapping class="br.com.Vendas.domain.Produto" />
              <mapping class="br.com.Vendas.domain.Venda" />
+             <mapping class="br.com.Vendas.domain.Item" />
           
 
 
