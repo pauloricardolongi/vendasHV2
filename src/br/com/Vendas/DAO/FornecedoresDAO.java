@@ -2,6 +2,7 @@ package br.com.Vendas.DAO;
 
 import java.util.List;
 
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -58,30 +59,30 @@ Session sessao = HibernateUtil.getSessionFactory().openSession();
 			}
 		return fornecedores;
 	}
+
+	public Fornecedor buscarPorCodigo(Long codigo){
+		Session sessao = HibernateUtil.getSessionFactory().openSession();
+				
+				Fornecedor fornecedor = null;
+				try{
+					
+					Query consulta = sessao.getNamedQuery("Fornecedor.buscarPorCodigo");
+					consulta.setLong("codigo",codigo);
+					fornecedor = (Fornecedor) consulta.uniqueResult();
+					
+					
+				}catch(RuntimeException ex){
+					throw ex;
+						
+					
+				}
+					
+					finally{
+						sessao.close();
+					}
+				return fornecedor;
+			}
 	
-//	public Fornecedor buscarPorCodigo(Long codigo){
-//		Session sessao = HibernateUtil.getSessionFactory().openSession();
-//				
-//				Fornecedor fornecedor = null;
-//				try{
-//					
-//					Query consulta = sessao.getNamedQuery("Fornecedor.buscarPorCodigo");
-//					consulta.setLong("codigo",codigo);
-//					fornecedor = (Fornecedor) consulta.uniqueResult();
-//					
-//					
-//				}catch(RuntimeException ex){
-//					throw ex;
-//						
-//					
-//				}
-//					
-//					finally{
-//						sessao.close();
-//					}
-//				return fornecedor;
-//			}
-//	
 //	public void excluir(Fornecedor fornecedor) {
 //		Session sessao = HibernateUtil.getSessionFactory().openSession();
 //		
