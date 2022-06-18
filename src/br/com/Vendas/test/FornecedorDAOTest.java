@@ -54,31 +54,30 @@ public class FornecedorDAOTest {
 		System.out.println(f5);
 
 	}
-//
-//	@Test
-//	@Ignore
-//	public void excluir() {
-//		FornecedoresDAO dao = new FornecedoresDAO();
-//
-//		Fornecedor fornecedor = dao.buscarPorCodigo(10L);
-//
-//		dao.excluir(fornecedor);
-//
-//	}
-//
-//	@Test
-//	@Ignore
-//	public void editar() {
-//
-//		FornecedoresDAO dao = new FornecedoresDAO();
-//
-//		Fornecedor fornecedor = dao.buscarPorCodigo(9L);
-//		Fornecedor fornecedo = dao.buscarPorCodigo(11L);
-//
-//		fornecedor.setDescricao("Por Menos");
-//		fornecedo.setDescricao("Zanon");
-//		dao.editar(fornecedor);
-//		dao.editar(fornecedo);
-//
-//	}
-}
+
+	@Test
+	@Ignore
+	public void excluir() {
+		FornecedoresDAO dao = new FornecedoresDAO();
+
+		Fornecedor fornecedor = dao.buscarPorCodigo(3L);
+
+		dao.excluir(fornecedor);
+
+	}
+
+	@Test
+	
+	public void editar() {
+	FornecedoresDAO dao = new FornecedoresDAO();
+
+	Fornecedor fornecedor = dao.buscarPorCodigo(2L);
+		Fornecedor fornecedo = dao.buscarPorCodigo(5L);
+
+		fornecedor.setDescricao("Por Menos");
+		fornecedo.setDescricao("Zanon");
+		dao.editar(fornecedor);
+		dao.editar(fornecedo);
+
+	}
+ }

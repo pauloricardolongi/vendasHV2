@@ -83,55 +83,55 @@ Session sessao = HibernateUtil.getSessionFactory().openSession();
 				return fornecedor;
 			}
 	
-//	public void excluir(Fornecedor fornecedor) {
-//		Session sessao = HibernateUtil.getSessionFactory().openSession();
-//		
-//		Transaction transacao = null;// inicia a transação como nulo
-//		try{
-//			transacao = sessao.beginTransaction(); //abrindo a transação
-//			
-//			sessao.delete(fornecedor);
-//			transacao.commit(); //confirmando a transação
-//			
-//		}catch(RuntimeException ex){
-//			if(transacao != null){
-//				transacao.rollback(); //desfazer a transação 
-//				
-//			}
-//			
-//		}
-//			
-//			finally{
-//				sessao.close();
-//			}
-//		
-//	}
-//	
-//	public void editar(Fornecedor fornecedor) {
-//		Session sessao = HibernateUtil.getSessionFactory().openSession();
-//		
-//		Transaction transacao = null;// inicia a transação como nulo
-//		try{
-//			transacao = sessao.beginTransaction(); //abrindo a transação
-//			
-//			
-//			sessao.update(fornecedor);
-//			transacao.commit(); //confirmando a transação
-//			
-//		}catch(RuntimeException ex){
-//			if(transacao != null){
-//				transacao.rollback(); //desfazer a transação 
-//				
-//			}
-//			
-//		}
-//			
-//			finally{
-//				sessao.close();
-//			}
-//		
-//	}
-//	
-//	
-//			
+	public void excluir(Fornecedor fornecedor) {
+		Session sessao = HibernateUtil.getSessionFactory().openSession();
+		
+		Transaction transacao = null;// inicia a transação como nulo
+		try{
+			transacao = sessao.beginTransaction(); //abrindo a transação
+			
+			sessao.delete(fornecedor);
+			transacao.commit(); //confirmando a transação
+			
+		}catch(RuntimeException ex){
+			if(transacao != null){
+				transacao.rollback(); //desfazer a transação 
+				
+			}
+			
+		}
+			
+			finally{
+				sessao.close();
+			}
+		
+	}
+	
+	public void editar(Fornecedor fornecedor) {
+		Session sessao = HibernateUtil.getSessionFactory().openSession();
+		
+		Transaction transacao = null;// inicia a transação como nulo
+		try{
+			transacao = sessao.beginTransaction(); //abrindo a transação
+			
+			
+			sessao.update(fornecedor);
+			transacao.commit(); //confirmando a transação
+			
+		}catch(RuntimeException ex){
+			if(transacao != null){
+				transacao.rollback(); //desfazer a transação 
+				
+			}
+			
+		}
+			
+		finally{
+				sessao.close();
+			}
+		
+	}
+	
+	
+		
 }
