@@ -15,7 +15,7 @@ public class FornecedorDAOTest {
 	public void salvar() {
 		Fornecedor f1 = new Fornecedor();
 		
-		f1.setDescricao("Matriz");
+		f1.setDescricao("Zaffari");
 		
 
 		FornecedoresDAO dao = new FornecedoresDAO();
@@ -60,24 +60,23 @@ public class FornecedorDAOTest {
 	public void excluir() {
 		FornecedoresDAO dao = new FornecedoresDAO();
 
-		Fornecedor fornecedor = dao.buscarPorCodigo(3L);
-
+		Fornecedor fornecedor = dao.buscarPorCodigo(5L);
+        
 		dao.excluir(fornecedor);
-
+        
 	}
 
 	@Test
-	
+	@Ignore
 	public void editar() {
 	FornecedoresDAO dao = new FornecedoresDAO();
 
-	Fornecedor fornecedor = dao.buscarPorCodigo(2L);
-		Fornecedor fornecedo = dao.buscarPorCodigo(5L);
+	Fornecedor fornecedor = dao.buscarPorCodigo(6L);	
 
 		fornecedor.setDescricao("Por Menos");
-		fornecedo.setDescricao("Zanon");
+	
 		dao.editar(fornecedor);
-		dao.editar(fornecedo);
+		
 
 	}
  }
